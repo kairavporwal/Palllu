@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090609">
+<title>Happy Birthday, Palllu ❤️</title>
+<style>
+  :root { --bg:#090609; --red:#ff3154; --pink:#ff7890; --muted:#c7b6bd; --card:#160d13; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:radial-gradient(ellipse at top, #35101c 0%, #10080e 40%, var(--bg) 78%); color:#fff4f6; font-family: Georgia, 'Times New Roman', serif; overflow-x:hidden; }
+  .grain { position:fixed; inset:0; pointer-events:none; opacity:.08; z-index:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E"); }
+  .wrap { position:relative; z-index:1; }
+  section { padding:84px 20px; max-width:980px; margin:auto; }
+  .hero { min-height:100svh; display:flex; align-items:center; justify-content:center; text-align:center; padding:28px 20px; position:relative; }
+  .eyebrow { letter-spacing:.28em; text-transform:uppercase; color:#ff9bab; font:11px/1.8 Arial,sans-serif; }
+  h1 { font-size:clamp(3.3rem, 13vw, 7rem); line-height:.92; font-weight:normal; margin:24px 0 18px; text-shadow:0 0 30px #ff315455; }
+  h1 span { color:var(--red); font-style:italic; }
+  .hero p { color:#e5cbd2; font-size:clamp(1rem, 3vw, 1.25rem); line-height:1.8; max-width:550px; margin:0 auto 28px; }
+  .btn { border:1px solid #ff536d; border-radius:999px; padding:14px 22px; color:white; background:#ff31541c; display:inline-block; text-decoration:none; font:12px Arial,sans-serif; letter-spacing:.13em; text-transform:uppercase; box-shadow:0 0 28px #ff315422; transition:.25s; cursor:pointer; }
+  .btn:hover { background:#ff315438; transform:translateY(-2px); }
+  .scroll { position:absolute; bottom:22px; left:0; right:0; color:#b99ba4; font:10px Arial,sans-serif; letter-spacing:.2em; text-transform:uppercase; }
+  .heart { position:absolute; color:#ff3154; opacity:.55; animation:float 6s ease-in-out infinite; filter:drop-shadow(0 0 10px #ff3154); }
+  .h1 { left:12%; top:23%; font-size:25px; } .h2 { right:12%; top:30%; font-size:17px; animation-delay:1.2s; } .h3 { left:19%; bottom:24%; font-size:14px; animation-delay:2s; }
+  @keyframes float { 0%,100%{transform:translateY(0) rotate(-8deg)} 50%{transform:translateY(-18px) rotate(8deg)} }
+  .section-label { color:var(--red); font:11px Arial,sans-serif; letter-spacing:.24em; text-transform:uppercase; }
+  h2 { font-weight:normal; font-size:clamp(2.2rem, 8vw, 4rem); margin:14px 0 18px; line-height:1.05; }
+  .lead { color:var(--muted); line-height:1.9; font-size:1.05rem; max-width:690px; }
+  .divider { width:72px; height:1px; background:linear-gradient(90deg, transparent, var(--red), transparent); margin:30px 0; }
+  .story-card { margin-top:30px; padding:28px; border:1px solid #ff536d35; background:linear-gradient(135deg,#ff315410,#ffffff03); border-radius:20px; }
+  .story-card p { color:#e4cdd3; line-height:1.9; margin:0; }
+  .memory-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:30px; }
+  .photo-slot { min-height:230px; border:1px dashed #ff789066; border-radius:16px; background:linear-gradient(145deg,#30101c,#120a10); overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center; position:relative; }
+  .photo-slot img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:none; }
+  .photo-slot .placeholder { padding:20px; color:#d7aeb8; font:12px/1.8 Arial,sans-serif; letter-spacing:.04em; }
+  .photo-slot strong { display:block; color:#fff; font:normal 1.1rem Georgia,serif; margin-bottom:8px; }
+  .reasons { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:28px; }
+  .reason { background:var(--card); border:1px solid #ff536d2c; border-radius:14px; padding:20px; color:#f4dce2; line-height:1.7; }
+  .reason b { color:var(--pink); display:block; font-weight:normal; font-size:1.2rem; margin-bottom:8px; }
+  .letter { background:linear-gradient(145deg,#1d0c14,#10090d); border:1px solid #ff536d45; padding:clamp(24px,5vw,44px); border-radius:20px; margin-top:28px; }
+  .letter p { color:#ecd6dc; line-height:2; font-size:1.05rem; white-space:pre-line; }
+  .signature { color:var(--pink); font-style:italic; font-size:1.5rem; }
+  .final { text-align:center; padding-bottom:110px; }
+  .final-box { border:1px solid #ff536d50; border-radius:22px; padding:38px 22px; background:radial-gradient(ellipse at top,#4a1021,#140a10 70%); }
+  #surprise { display:none; max-width:650px; margin:25px auto 0; color:#f5dce2; line-height:1.9; font-size:1.1rem; }
+  footer { text-align:center; color:#9d7c86; font:10px Arial,sans-serif; letter-spacing:.15em; padding:0 20px 35px; }
+  @media(max-width:560px) { section{padding:65px 18px} .memory-grid,.reasons{grid-template-columns:1fr} .photo-slot{min-height:260px} .story-card{padding:22px} }
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<div class="wrap">
+  <header class="hero" id="top">
+    <span class="heart h1">♥</span><span class="heart h2">♥</span><span class="heart h3">♥</span>
+    <div>
+      <div class="eyebrow">A little universe made for you</div>
+      <h1>Happy Birthday,<br><span>Palllu.</span></h1>
+      <p>To my favourite person, my Pearl. Two years of memories, laughter, little moments, and a love I’m so grateful for.</p>
+      <a class="btn" href="#story">Open your surprise ♥</a>
+    </div>
+    <div class="scroll">Scroll slowly · this is for you</div>
+  </header>
+
+  <section id="story">
+    <div class="section-label">01 · Us, in a few words</div>
+    <h2>Two years.<br>Still my favourite.</h2>
+    <p class="lead">Some people become a part of your life so naturally that you can’t imagine your favourite moments without them. For me, that person is you.</p>
+    <div class="divider"></div>
+    <div class="story-card">
+      <p>Dear Pearl, aka my Palllu,<br><br>Two years with you means two years of little memories that have become a big part of my life. It’s not only the special days I love — it’s the random conversations, the silly moments, the laughs, and all the small things that are ours. I’m thankful for you, for us, and for every memory we’ve made. I hope this new year of your life gives you as much happiness as you bring into mine. ❤️</p>
+    </div>
+  </section>
+
+  <section id="memories">
+    <div class="section-label">02 · Little moments, forever</div>
+    <h2>Our memories.</h2>
+    <p class="lead">Add your favourite photos in these spaces. Choose pictures that tell your story — your first photo, a funny memory, a favourite day, or just a picture where you both look happy.</p>
+    <div class="memory-grid">
+      <div class="photo-slot"><img alt="Our memory 1"><div class="placeholder"><strong>Memory No. 1</strong>Add your photo as <em>memory1.jpg</em></div></div>
+      <div class="photo-slot"><img alt="Our memory 2"><div class="placeholder"><strong>Memory No. 2</strong>Add your photo as <em>memory2.jpg</em></div></div>
+      <div class="photo-slot"><img alt="Memory that makes me smile"><div class="placeholder"><strong>My favourite smile</strong>Add your photo as <em>memory3.jpg</em></div></div>
+      <div class="photo-slot"><img alt="A special day together"><div class="placeholder"><strong>A day to remember</strong>Add your photo as <em>memory4.jpg</em></div></div>
+    </div>
+  </section>
+
+  <section id="reasons">
+    <div class="section-label">03 · A few reasons</div>
+    <h2>Why you’re special to me.</h2>
+    <p class="lead">I could probably write a hundred reasons, but here are a few to start. You can edit these to make them even more personal.</p>
+    <div class="reasons">
+      <div class="reason"><b>01 · Your heart</b>The way you care, even in little ways that you might not notice yourself.</div>
+      <div class="reason"><b>02 · Your smile</b>How one smile from you can make an ordinary moment feel better.</div>
+      <div class="reason"><b>03 · Our chaos</b>All the random, funny, unserious moments that only make sense to us.</div>
+      <div class="reason"><b>04 · Being you</b>You don’t have to be perfect or do anything special to matter to me. You’re you, and that’s enough.</div>
+    </div>
+  </section>
+
+  <section id="letter">
+    <div class="section-label">04 · Just between us</div>
+    <h2>A letter for my Pearl.</h2>
+    <div class="letter">
+      <p>Happy birthday, Palllu. ❤️
+
+      I hope you know how important you are to me. Thank you for being part of my life and for giving me so many memories to look back on with a smile. These two years mean a lot to me, and I’m excited for all the little moments we still have ahead of us.
+
+      On your birthday, I wish you peace when things feel hard, confidence when you doubt yourself, people who treat you with the love you deserve, and so many reasons to smile. I hope this year brings you closer to the things you dream about.
+
+      No website or letter could fit everything I want to say, but I hope this reminds you of one thing: you are loved, appreciated, and very special to me.
+
+      <span class="signature">Happy birthday, my Palllu. Always cheering for you. ❤️</span></p>
+    </div>
+  </section>
+
+  <section class="final" id="final">
+    <div class="final-box">
+      <div class="section-label">05 · One last thing</div>
+      <h2>Still choosing you.</h2>
+      <p class="lead" style="margin:0 auto 24px">There’s one more little message waiting for you, birthday girl.</p>
+      <button class="btn" id="revealBtn" type="button">Tap for your surprise ♥</button>
+      <div id="surprise">Pearl, my Palllu — thank you for these two beautiful years. I hope today makes you feel as loved and celebrated as you deserve. This little website is just a small reminder that, out of all the things in my life, the memories we make together are some of my favourites. Happy birthday. ❤️</div>
+    </div>
+  </section>
+  <footer>MADE WITH LOVE · FOR PEARL (PALLLU) ♥</footer>
+</div>
+<script>
+  document.getElementById('revealBtn').addEventListener('click', function () {
+    const surprise = document.getElementById('surprise');
+    surprise.style.display = surprise.style.display === 'block' ? 'none' : 'block';
+    this.textContent = surprise.style.display === 'block' ? 'Close your surprise ♥' : 'Tap for your surprise ♥';
+  });
+  // Photo slots show images when matching files are placed beside index.html.
+  document.querySelectorAll('.photo-slot img').forEach((img, i) => {
+    img.src = `memory${i + 1}.jpg`;
+    img.onload = () => {
+      img.style.display = 'block';
+      img.nextElementSibling.style.display = 'none';
+    };
+    img.onerror = () => { img.style.display = 'none'; };
+  });
+</script>
+</body>
+</html>
